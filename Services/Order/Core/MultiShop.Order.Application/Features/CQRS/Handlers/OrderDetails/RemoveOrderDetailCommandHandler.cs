@@ -18,7 +18,7 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetails
             _repository = repository;
         }
 
-        public async void Handle(RemoveOrderDetailCommand command) 
+        public async Task Handle(RemoveOrderDetailCommand command) 
         {
             var value = await _repository.GetByIdAsync(command.Id);
             await _repository.DeleteAsync(value);
