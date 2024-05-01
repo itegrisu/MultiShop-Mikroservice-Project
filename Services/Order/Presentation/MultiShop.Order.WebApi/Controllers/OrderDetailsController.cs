@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MultiShop.Order.Application.Features.CQRS.Commands.AddressCommands;
 using MultiShop.Order.Application.Features.CQRS.Commands.OrderDetailsCommands;
+using MultiShop.Order.Application.Features.CQRS.Handlers.AddressHandlers;
 using MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetails;
 using MultiShop.Order.Application.Features.CQRS.Queries.OrderDetails;
 using System.Runtime.InteropServices;
@@ -57,7 +59,7 @@ namespace MultiShop.Order.WebApi.Controllers
         [HttpDelete]
         public async Task<IActionResult> RemoveOrderDetail(int id)
         {
-            _removeOrderDetailCommandHandler.Handle(new RemoveOrderDetailCommand(id));
+            await _removeOrderDetailCommandHandler.Handle(new RemoveOrderDetailCommand(id));
             return Ok("Sipariş detayı silindi");
         }
 
