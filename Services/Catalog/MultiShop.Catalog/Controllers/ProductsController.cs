@@ -52,5 +52,12 @@ namespace MultiShop.Catalog.Controllers
             await _productServices.UpdateProductAsync(updateProductDto);
             return Ok("Ürün başarıyla güncellendi");
         }
+
+        [HttpGet("ProductListWithCategory")]
+        public async Task<IActionResult> ProductListWithCategory()
+        {
+            var values = await _productServices.GetProductsWithCategoryAsync();
+            return Ok(values);
+        }
     }
 }
