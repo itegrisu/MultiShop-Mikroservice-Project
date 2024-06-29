@@ -6,17 +6,17 @@ namespace MultiShop.WebUI.ViewComponents.DefaultViewComponents
 {
     public class _SpeacialOfferComponentPartial : ViewComponent
     {
-    //    private readonly ISpecialOfferService _specialOfferService;
-    //    public _SpeacialOfferComponentPartial(ISpecialOfferService specialOfferService)
-    //    {
-    //        _specialOfferService = specialOfferService;
-    //    }
-    //    public async Task<IViewComponentResult> InvokeAsync()
-    //    {
-    //        var values = await _specialOfferService.GetAllSpecialOfferAsync();
-    //        return View(values);
-    //    }
-    private readonly IHttpClientFactory _httpClientFactory;
+        //    private readonly ISpecialOfferService _specialOfferService;
+        //    public _SpeacialOfferComponentPartial(ISpecialOfferService specialOfferService)
+        //    {
+        //        _specialOfferService = specialOfferService;
+        //    }
+        //    public async Task<IViewComponentResult> InvokeAsync()
+        //    {
+        //        var values = await _specialOfferService.GetAllSpecialOfferAsync();
+        //        return View(values);
+        //    }
+        private readonly IHttpClientFactory _httpClientFactory;
         public _SpeacialOfferComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
@@ -39,4 +39,3 @@ namespace MultiShop.WebUI.ViewComponents.DefaultViewComponents
 
 
 
-  
